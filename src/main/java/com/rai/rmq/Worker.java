@@ -30,7 +30,7 @@ public class Worker {
                 System.out.println(" [x] Done");
             }
         };
-        boolean autoAck = true;
+        boolean autoAck = false;
         channel.basicConsume(QUEUE_NAME, autoAck, deliverCallback, consumerTag -> { });
     }
 
